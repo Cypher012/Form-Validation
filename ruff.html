@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      height: 4rem;
+      background-color: rgb(42, 107, 176);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 4rem;
+      font-size: 1.2rem;
+    }
+    .greet{
+      color: aliceblue
+    }
+
+    .sign-out{
+      border: none;
+      background-color: transparent;
+      color: aliceblue;
+      font-size: 1.2rem;
+    }
+    .container2{
+      display: flex;
+      height: 20rem;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+ 
+</head>
+
+
+<body>
+  <div class="container">
+    <p class="greet">Hello</p>
+    
+    <button class="sign-out">
+      <i class="fa-solid fa-door-open"></i>
+      Sign out
+    </button>
+    </div>
+
+  <div class="container2">
+  
+    <h1>Signed up successfully</h1>
+  </div>
+</body>
+<script>
+  const signOut = document.querySelector(".sign-out")
+  signOut.addEventListener('click', (e) =>{
+    e.preventDefault()
+    setInterval(() => window.location.href = "./index.html" , 3000)
+  })
+</script>
+
+</html>
