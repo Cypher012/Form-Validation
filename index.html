@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./CSS/output.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="container" class="container flex justify-center absolute items-center h-screen">
+    <button id="btn-home"
+      class="rounded-full p-3 font-bold text-xl text-blue-700 duration-500 bg-gray-400 hover:bg-gray-800 box drop-shadow-md">Get
+      Started</button>
+  </div>
+
+
+  <div id="logIn" class="form-page h-screen hidden  w-full  z-20 ">
+    <div class="form w-80 px-5 pb-4 absolute h-auto bg-slate-100 border-2 top-6 right-16">
+      <button class="font-bold text-sky-700 hover:text-red-700 btn-round absolute  top-4 right-6 dismissBtn">x</button>
+      <h2 class="heading text-slate-700 text-2xl font-semibold border-b border-b-gray-400 mt-6 pb-6 text-center">Log In
+      </h2>
+      <form id="form-menu1" class="border-b border-b-slate-400 pb-5 ">
+        <ul>
+          <li class="my-5">
+            <label for="email">Email</label>
+            <input placeholder="example@gmail.com" title=""
+              class="block border border-gray-400 w-full px-2 py-1 rounded-lg" type="email" id="email">
+          </li>
+          <li class="my-5">
+            <label for="password">password</label>
+            <input class="block border border-gray-400 w-full px-2 py-1 rounded-lg " type="password" id="password">
+          </li>
+        </ul>
+        <span class=" mt-7">
+          <input type="checkbox" class="cursor-pointer" id="" terms>
+          <label class="ml-2 cursor-pointer" for="terms">Remember me</label>
+        </span>
+
+        <p class="error"></p>
+        <button class="mt-7 p-2 w-full rounded-lg text-gray-100 duration-300 bg-sky-700 hover:bg-sky-900 active:bg-sky-900">Log in</button>
+        <p class="text-center mt- font-bold text-sky-700 mt-3"><a href="#">Forgot Password?</a></p>
+
+        <div class="mt-5">
+          <p class="mb-3 font-semibold text-lg">or Log in with : </p>
+          <span class="flex w-32 justify-around h-10 items-center">
+            <span class="social-logo rounded-full w-8 h-8 flex justify-center items-center bg-blue-950"><i
+                class="fa-brands fa-facebook-f text-white"></i></span>
+            <span class="social-logo rounded-full w-8 h-8 flex justify-center items-center bg-sky-500"><i
+                class="fa-brands fa-twitter text-white"></i></span>
+            <span class="social-logo bg-red-600 rounded-full w-8 h-8 flex justify-center items-center"><i
+                class="fa-brands fa-google-plus-g text-lg text-white"></i></span>
+        </div>
+      </form>
+
+      <span class="flex flex-col items-center mt-2">
+        <p>Don't have an account ?</p>
+        <a href="#" id="form-signUp" class="text-sky-800 font-bold hover:text-sky-500">Sign up</a>
+      </span>
+    </div>
+  </div>
+
+  <div id="signUp" class="form-page hidden h-screen  w-full  z-20 ">
+    <div class="form w-80 px-5 pb-4 absolute h-auto bg-slate-100 border-2 top-6 right-16">
+
+      <button class="font-bold text-sky-700 hover:text-red-700 btn-round absolute  top-4 right-6 dismissBtn">x</button>
+      <h2 class="heading text-slate-700 text-2xl font-semibold border-b border-b-gray-400 mt-6 pb-6 text-center">Sign up
+      </h2>
+      <form id="form-menu2" class="border-b border-b-slate-400 pb-5 ">
+        <ul>
+          <li class="my-5">
+            <label for="name">Name</label>
+            <input class="block border border-gray-400 w-full px-2 py-1 rounded-lg" type="text" id="signName">
+            <span id="name-error" class="error-message"></span>
+          </li>
+          <li class="my-5">
+            <label for="email">Email</label>
+            <input placeholder="example@gmail.com" title=""
+              class="block border border-gray-400 w-full px-2 py-1 rounded-lg" type="email" id="signEmail">
+            <span id="email-error" class="error-message"></span>
+          </li>
+          <li class="my-5">
+            <label for="password">password</label>
+            <input class="block border border-gray-400 w-full px-2 py-1 rounded-lg " type="password" id="signPassword">
+            <span id="password-error" class="error-message"></span>
+          </li>
+        </ul>
+        <span class="mt-7">
+          <input type="checkbox" id="terms">
+          <label class="ml-2" for="terms">I agree with <a class="text-sky-700 font-bold" href="#">Terms</a> and <a
+              class="text-sky-700 font-bold" href="#">Privacy</a></label>
+          <p id="checkboxError" class="error-message"></p>
+        </span>
+
+        <button id="btnSignUp" class="mt-7 p-2 w-full duration-300 rounded-lg text-gray-100 bg-sky-700 hover:bg-sky-900 active:bg-sky-900">Sign
+          up</button>
+
+        <div class="mt-5">
+          <p class="mb-3 font-semibold text-lg">or Sign up with: </p>
+          <span class="flex w-32 justify-around h-10 items-center">
+            <span class="social-logo rounded-full w-8 h-8 flex justify-center items-center bg-blue-950"><a href="https://web.facebook.com/"><i
+                class="fa-brands fa-facebook-f text-white"></i></a></span>
+            <span class="social-logo rounded-full w-8 h-8 flex justify-center items-center bg-sky-500"><a href="https://twitter.com/"><i
+                class="fa-brands fa-twitter text-white"></i></a></span>
+            <span class="social-logo bg-red-600 rounded-full w-8 h-8 flex justify-center items-center"><a href="https://accounts.google.com/"><i
+                class="fa-brands fa-google-plus-g text-lg text-white"></i></a></span>
+        </div>
+      </form>
+      <span class="flex flex-col items-center mt-2">
+        <p>Already have an account ?</p>
+        <a href="#" id="form-logIn" class="text-sky-800 font-bold hover:text-sky-500">Log in</a>
+      </span>
+    </div>
+  </div>
+
+
+</body>
+<script type="module" src="./JS/main.js"></script>
+
+</html>
